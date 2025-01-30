@@ -1,13 +1,13 @@
+import CoverArt from "./CoverArt";
 import Footer from "./Footer";
 import MusicPlayer from "./MusicPlayer";
 
-function App() {
+export default function App() {
   return (
-    <div className="h-full flex flex-col justify-between p-8 min-h-screen">
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+      <CoverArt />
       <MusicPlayer />
-      <Footer />
+      <Footer/>
     </div>
   );
 }
-
-export default App;

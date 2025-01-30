@@ -9,3 +9,7 @@ bracketSameLine: false
 arrowParens: always
 endOfLine: lf
 htmlWhitespaceSensitivity: css
+
+# {
+  # "plugins": ["prettier-plugin-tailwindcss"]
+# }
