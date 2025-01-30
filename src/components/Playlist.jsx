@@ -10,6 +10,11 @@ export default function Playlist() {
         <PlayListItem title="Joro" artist="Wizkid" duration="4:23" isSelected={false} />
         <PlayListItem title="Essence" artist="Wizkid ft. Tems" duration="3:43" isSelected={false} />
         <PlayListItem title="Starboy" artist="The Weeknd" duration="3:50" isSelected={false} />
+        <PlayListItem title="Calm Down" artist="Rema" duration="3:40" isSelected={false} />
+        <PlayListItem title="Rush" artist="Ayra Starr" duration="3:06" isSelected={false} />
+        <PlayListItem title="Understand" artist="Omah Lay" duration="2:55" isSelected={false} />
+        <PlayListItem title="Ngozi" artist="Crayon & Ayra Starr" duration="3:42" isSelected={false} />
+        <PlayListItem title="If" artist="Davido" duration="3:58" isSelected={false} />
       </div>
     </div>
   );
