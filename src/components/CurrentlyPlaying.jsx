@@ -6,15 +6,22 @@ import VolumeControls from "./VolumeControls";
 export default function CurrentlyPlaying() {
   return (
     <div className="flex flex-col items-center p-6 bg-gray-800 rounded-lg w-full md:w-96">
+      {/* Cover Art */}
       <CoverArt />
+
+      {/* Song Title */}
       <div className="mt-4">
-        <SongTitle title="People" artist="Libianca" />
+        <SongTitle title="Blinding Lights" artist="The Weeknd" />
       </div>
-      <div className="mt-6">
+
+      {/* Play Controls */}
+      <div className="w-full mt-6 flex flex-col items-center">
         <PlayControls />
-      </div>
-      <div className="mt-4">
-        <VolumeControls />
+        
+        {/* Volume Controls: Full Width Below Shuffle Button */}
+        <div className="w-full mt-4 px-6">
+          <VolumeControls />
+        </div>
       </div>
     </div>
   );
