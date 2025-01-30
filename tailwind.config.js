@@ -6,8 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-      screens: {
-        md2: "929px", // Custom breakpoint for 929px width
+      colors: {
+        primary: "#1DB954", // Custom Green (Spotify-like)
+        secondary: "#191414", // Custom Dark Background
+        accent: "#F7A40C", // Custom Orange
       },
     },
   },

@@ -13,31 +13,31 @@ export default function PlayControls() {
       {/* Speed Button */}
       <button
         onClick={() => setSpeed(speed === 1 ? 2 : 1)}
-        className="w-12 h-12 flex items-center justify-center bg-gray-800 text-white text-lg font-bold rounded-full hover:bg-gray-700"
+        className="w-12 h-12 flex items-center justify-center bg-primary text-black text-lg font-bold rounded-full hover:bg-accent transition"
       >
         {speed}x
       </button>
 
       {/* Rewind Button */}
-      <button className="p-3 bg-gray-800 rounded-full hover:bg-gray-700">
+      <button className="p-3 bg-primary rounded-full hover:bg-accent transition">
         <img src={rewindIcon} alt="Rewind" className="w-6 h-6" />
       </button>
 
       {/* Play/Pause Button */}
       <button
         onClick={() => setIsPlaying(!isPlaying)}
-        className="p-4 bg-blue-600 rounded-full hover:bg-blue-500"
+        className="p-4 bg-accent rounded-full hover:bg-primary transition"
       >
         <img src={playIcon} alt="Play/Pause" className="w-8 h-8" />
       </button>
 
       {/* Forward Button */}
-      <button className="p-3 bg-gray-800 rounded-full hover:bg-gray-700">
+      <button className="p-3 bg-primary rounded-full hover:bg-accent transition">
         <img src={forwardIcon} alt="Forward" className="w-6 h-6" />
       </button>
 
       {/* Shuffle Button */}
-      <button className="p-3 bg-gray-800 rounded-full hover:bg-gray-700">
+      <button className="p-3 bg-primary rounded-full hover:bg-accent transition">
         <img src={shuffleIcon} alt="Shuffle" className="w-6 h-6" />
       </button>
     </div>
