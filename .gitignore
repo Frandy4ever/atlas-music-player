@@ -7,11 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies
 node_modules
 dist
 dist-ssr
 *.local
+build
+coverage
+.next
+.vercel
+.git
 
 # Editor directories and files
 .vscode/*
@@ -24,26 +28,4 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment files
-.env
-.env.*
-!.env.example
-
-# Testing
-coverage
-/cypress/videos/
-/cypress/screenshots/
-
-# Production build
-build
-
-# Temporary files
-.temp
-.tmp
-.cache
-
-# TypeScript
-*.tsbuildinfo
-
-components-Old/
-Old-components/
+.components/

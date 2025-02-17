@@ -1,0 +1,38 @@
+@layer utilities {
+  .music-container {
+    @apply flex flex-col md:flex-row items-center justify-center p-6 gap-0 md:gap-4 lg:gap-8;
+  }
+  
+  .section-base {
+    @apply border bg-white dark:bg-slate-800 shadow-lg rounded-lg;
+  }
+
+  .currently-playing-section {
+    @apply section-base w-full md:w-music-section h-[637px] dark:border-red-300 p-4 md:rounded-l-lg md:rounded-r-none;
+  }
+
+  .playlist-section {
+    @apply section-base w-full md:w-playlist-width dark:border-red-300 p-4 md:p-6 md:rounded-r-lg md:rounded-l-none;
+  }
+
+  .progress-track {
+    @apply relative w-full h-1 bg-red-100 dark:bg-red-900 rounded-lg overflow-hidden;
+  }
+
+  .icon-button {
+    @apply text-slate-950 dark:text-red-100 hover:text-blue-400 dark:hover:text-red-400 transition-colors;
+  }
+
+  .primary-button {
+    @apply w-[48px] h-[48px] flex items-center justify-center rounded-lg bg-slate-950 dark:bg-red-100 hover:bg-blue-600 dark:hover:bg-red-400 transition-colors;
+  }
+}
+
+@keyframes pulse-icon {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
+
+.animate-pulse-icon {
+  animation: pulse-icon 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
