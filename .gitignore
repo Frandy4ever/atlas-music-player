@@ -46,3 +46,4 @@ build
 *.tsbuildinfo
 
 components-Old/
+Old-components/
