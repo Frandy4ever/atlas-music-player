@@ -54,7 +54,6 @@ const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
   onSeek,
   hasSong,
   onPlaybackSpeedChange,
-  playbackSpeed,
   showLyrics,
   onLyricsToggle,
   lyrics,
