@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* your existing */
+  --color-primary: #dc2626;
+  --color-primary-hover: #b91c1c;
+  --color-secondary: #991b1b;
+  --color-secondary-hover: #7f1d1d;
+  --color-primary-text: #0f172a;
+  --color-secondary-text: #64748b;
+  --color-bg-dark: #0f172a;
+  --color-bg-light: #cbd5e1;
+
+  --spacing-music-section: 400px;
+  --spacing-playlist-width: 427px;
+
+  /* new: surfaces & borders */
+  --color-surface: #ffffff;
+  --color-surface-dark: #0b1220;
+  --color-border-light: #60a5fa;
+  --color-border-dark: #dc2626;
+
+  /* new: accents (light ↔ blue, dark ↔ red) */
+  --color-accent: #60a5fa;
+  --color-accent-hover: #3b82f6;
+  --color-accent-dark: oklch(70.4% 0.191 22.216);
+  --color-accent-dark-hover: #b91c1c;
+
+  /* new: footer */
+  --color-footer-bg-light: var(--color-accent);
+  --color-footer-text-light: var(--color-primary);
+  --color-footer-bg-dark: var(--color-accent-dark);
+  --color-footer-text-dark: var(--color-accent);
+  --color-footer-text: oklch(98.4% 0.019 200.873);
+
+  /* new: progress & skeletons */
+  --color-progress-bg: #fee2e2;
+  --color-progress-inactive: #9ca3af;
+  --color-skeleton: #e5e7eb;
+  --color-skeleton-dark: #1f2937;
+
+  /* new: list/hover states & on-accent text */
+  --color-hover-light: #bfdbfe;
+  --color-hover-dark: #fecaca;
+  --color-on-accent-light: #1e3a8a;
+  --color-on-accent-dark: #7f1d1d;
+
+  /* new: overlay */
+  --color-overlay: rgba(0,0,0,.7);
+  --color-overlay-text: #ffffff;
+
+  /* new: slider tones */
+  --color-range-low: #111827;
+  --color-range-low-on: #ffffff;
+  --color-range-mid: #0b1220;
+  --color-range-mid-on: #ffffff;
+  --color-range-high-light: #1e40af;
+  --color-range-high-dark: #7f1d1d;
+
+  /* header token (optional) */
+  --color-header-bg-light: var(--color-bg-light);
+  --color-header-bg-dark: var(--color-bg-dark);
+}
