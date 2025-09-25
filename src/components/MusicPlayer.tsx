@@ -38,23 +38,6 @@ const MusicPlayer = () => {
     }
   }, []);
 
-  /** Fetch Playlist with proper loading handling */
-  useEffect(() => {
-    setIsLoading(true);
-    fetch("/api/v1/playlist")
-      .then((res) => res.json())
-      .then((data) => {
-        setPlaylist(data);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 1000);
-      })
-      .catch((error) => {
-        console.error("Error fetching playlist:", error);
-        setIsLoading(false);
-      });
-  }, []);
-
   /** Fetch Song Details before playing */
   const handleSongSelection = async (songId: string) => {
     try {
@@ -68,6 +51,30 @@ const MusicPlayer = () => {
       console.error("Error fetching song details:", error);
     }
   };
+
+  /** Fetch Playlist with proper loading handling */
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("/api/v1/playlist")
+      .then((res) => res.json())
+      .then((data) => {
+        setPlaylist(data);
+
+        const savedSong = localStorage.getItem("lastPlayingSong");
+        if (!savedSong && data.length > 0) {
+          // ✅ Load full details for first song
+          handleSongSelection(data[0].id);
+        }
+
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
+      })
+      .catch((error) => {
+        console.error("Error fetching playlist:", error);
+        setIsLoading(false);
+      });
+  }, []);
 
   /** Handle Play/Pause */
   const handlePlayToggle = () => {
@@ -132,7 +139,7 @@ const MusicPlayer = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-light dark:bg-slate-900">
-      <div className="flex flex-col md:flex-row flex-grow w-full max-w-screen-lg mx-auto items-stretch  p-3">
+      <div className="flex flex-col md:flex-row flex-grow w-full max-w-screen-lg mx-auto items-stretch p-3">
         {isLoading ? (
           <LoadingSkeleton />
         ) : (
@@ -156,6 +163,7 @@ const MusicPlayer = () => {
                 playbackSpeed={playbackSpeed}
                 showLyrics={showLyrics}
                 onLyricsToggle={() => setShowLyrics(!showLyrics)}
+                lyrics={currentSong?.lyrics || ""}
               />
             </div>
 
