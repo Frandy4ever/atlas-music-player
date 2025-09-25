@@ -14,6 +14,7 @@ export default defineConfig({
     globals: true,
     setupFiles: "./src/setupTests.ts",
     coverage: {
+      provider: "v8",
       reporter: ["text", "html", "json"],
       reportsDirectory: "coverage",
     },
